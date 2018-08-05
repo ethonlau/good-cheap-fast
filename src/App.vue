@@ -3,6 +3,7 @@
     <div class="item-group">
       <a :class="[ 'item', { 'active': item.status } ]"
          v-for="(item, index) in list"
+         :key="item.id"
          @click="switchStatus(index)">
         <span class="switch"></span>
         {{ item.name }}
